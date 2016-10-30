@@ -27,4 +27,4 @@ Conférence INFORSID, atelier Intégration, interrogation et analyse de Logs', F
 ###DataTube2 : exploration interactive de données temporelles en réalité virtuelle
 Florian Sureau, Fatma Bouali, Gilles Venturini
 8èmes Journées Francophones, Extraction et Gestion des Connaissances, Sophia Antipolis (EGC 2008)
-pp.13
+pp.13-17

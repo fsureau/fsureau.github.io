@@ -22,7 +22,7 @@ pp. 62–75
 
 ###DataTube2 : un outil d'analyse de logs en réalité virtuelle
 Sureau, Florian and Bouali, Fatma and Venturini, Gilles
-Conférence INFORSID, atelier 'Intégration, interrogation et analyse de Logs', Fontainebleau, France (2008)
+Conférence INFORSID, atelier Intégration, interrogation et analyse de Logs', Fontainebleau, France (2008)
 
 ###DataTube2 : exploration interactive de données temporelles en réalité virtuelle
 Florian Sureau, Fatma Bouali, Gilles Venturini

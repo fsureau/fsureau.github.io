@@ -21,6 +21,10 @@ $(document).ready(function() {
     	showSection("experiences");
     });
     
+	$(".linkPublications").click(function() {
+    	showSection("publications");
+    });
+    
 	$(".linkContact").click(function() {
     	showSection("contact");
     });
@@ -55,6 +59,15 @@ function showSection(sectionName) {
 	else{
 		$("section#competences").hide();
 		$(".linkCompetences").removeClass('active');		
+	}
+	
+	if(sectionName == "publications"){
+		$("section#publications").show();
+		$(".linkPublications").addClass('active');	
+	}
+	else{
+		$("section#publications").hide();
+		$(".linkPublications").removeClass('active');		
 	}
 	
 	if(sectionName == "experiences"){

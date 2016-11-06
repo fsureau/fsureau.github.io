@@ -25,9 +25,9 @@ $(document).ready(function() {
     	showSection("publications");
     });
     
-	$(".linkContact").click(function() {
+	/*$(".linkContact").click(function() {
     	showSection("contact");
-    });
+    });*/
 });
 
 /**

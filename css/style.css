@@ -1,5 +1,5 @@
 body{
-	background-color : #e2e7ec;//#dbdbdb;
+	background-color : #eaeef1;//e2e7ec
 	font: 12px/18px "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
 	overflow-y:scroll;
 	padding-left: 0px;
@@ -35,14 +35,19 @@ body:before
 }
 
 #title_header {
-	font-size: 22px;
+	font-size: 23px;
 	font-weight: bold;
 	text-align: center;
 	line-height: 1.1em;
 }
 
 #title_header p:first-child {
-	margin-top: 20px;
+	margin-top: 14px;
+}
+#title_header p:nth-child(2) {
+	margin-top: 30px;
+	font-size: 1.2em;
+	font-family: Tahoma;
 }
 
 #title_header p:last-child {
@@ -51,14 +56,14 @@ body:before
 
 .contentArticle h2 {
 	text-align: center;
-	margin: 25px 0 25px 0;
 	font-size: 25px;
 }
 
-#mobileNavBar {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-left: 0px;
+.contentArticle{
+	box-sizing: border-box;
+	max-width: 100%;
+    margin: 45px auto;
+    position: relative;   
 }
 
 .contentArticle > ul, section#contact > div {
@@ -67,27 +72,235 @@ body:before
     background: -webkit-linear-gradient(top, #FFFFFF 0%,#F2F2F2 100%);
     padding: 10px 5px 10px 5px;
     margin: 30px 0 30px 0; 
+	border-top : 2px #08c solid;/*6c6c6c*/
 }
 
 .table_element {
-	display: table;
 	width: 100%;
-	margin: 10px 0 10px 0;
+    margin: 15px auto 20px auto;
+    position: relative;
+	display: inline-block;
+	vertical-align: top;
 }
 
-.annee {
-	padding-left: 25px;
-	width: 140px;
-	display: table-cell;
-}
-.table_element ul {
-	display: table-cell;
+.table_element .interligne li:first-child{
+	line-height: 1.5em;
 }
 
-ul.interligne > li:first-child {
-	margin-top: 5px;
-	margin-bottom: 5px;
+.table_element .annee {
+	margin: 10px;
+	color: #6c6c6c;
 }
+
+ul .interligne{
+	border-top: 1px #e2e7ec solid;
+	margin : 15px 10px 5px 10px;
+	padding-top: 10px;
+}
+
+.timeLine{
+	width: 1px;
+	height: auto;
+    background: #6c6c6c;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    bottom: 0;
+}
+
+.table_element:after{
+	content: '';
+    display: block;
+    position: absolute;
+}
+
+.table_element:before{
+	content: '';
+	border-color: #F48024;
+	display: block;
+    position: absolute;
+	box-sizing: border-box;
+    width: 7px;/*27px*/
+    height: 7px;/*27px*/
+    border-radius: 50%;
+    background-color: #FFF;
+    border: 1px solid #6c6c6c;
+	top : 7px;
+	box-sizing: border-box;
+}
+
+.contentArticle > ul:nth-child(odd){
+	width: 46%;
+}
+
+.contentArticle > ul:first-child{
+	margin-left: 54%;	
+    margin-top: -100px;
+    margin-bottom: -100px;
+}
+
+.contentArticle > ul:nth-child(even){
+	margin-left: 54%;
+    margin-top: -100px;
+    margin-bottom: -100px;
+}
+
+ul:nth-child(odd) > .table_element:after{
+	width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #aeaeae;
+    right: -15px;
+	top: 0px;
+}
+
+ul:nth-child(even) > .table_element:after{
+	width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #aeaeae;
+    left: -15px;
+	top: 0px;
+}
+
+ul:nth-child(odd) > .table_element:before{
+    right: -34px;/*-42px*/
+	left: inherit; 
+}
+
+ul:nth-child(even) > .table_element:before{
+	box-sizing: border-box;
+    left: -43px;/*-12.5%;*/
+}
+
+ul.table_element.interligne > li:first-child {
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+.techno {
+	font-style: italic;
+	padding-top: 5px;
+}
+
+section#publications.contentArticle:nth-child(even){
+	margin-top: 150px;	
+}
+
+.img-polaroid {
+	padding: 6px;
+}
+
+/*COMPETENCES*/
+#competences {
+	width: 100%;
+	text-align: center;
+	margin: 45px auto 0px auto;
+	position: relative;
+}
+
+#competences ul{
+	border: 0px;
+	background: none;
+	box-shadow: none;
+	margin: 0 50px;	
+}
+
+#competences.contentArticle > ul {
+	display: initial;
+	text-align: center;	
+}
+
+.table_element_competence .annee{
+	text-align: left;
+	border-bottom : 1px #6c6c6c solid;/*6c6c6c*/
+	color : #6c6c6c;
+	margin-top: 15px;
+	padding-left : 15px;
+	padding-bottom: 5px;	
+}
+
+#competences.contentArticle > ul:nth-child(even) , #competences.contentArticle > ul:nth-child(odd) {
+	margin: 0px;
+}
+
+.table_element_competence ul li
+{
+	width: 100px;
+	margin: 15px;
+	text-align: center;
+	display: inline-block;
+}
+
+.table_element_competence ul li img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 2px solid #6c6c6c;
+	background-color: #fff;
+}
+.table_element_competence ul li .label{
+	width: 100px;
+	position: relative;
+	top: 85px;
+	background-color: #B3BEC7;
+	padding: 2px;
+}
+
+.linkContact{
+	display: inline-flex;
+	padding-top: 5px;
+	right: 10px;
+}
+
+.navbar .nav>li.linkContact{	
+	float: right;
+}
+
+li .viadeo,
+li .linkedin,
+li .mail,
+li .vcf{
+	background-image: url('../img/IconsSmall.png');
+	background-repeat: no-repeat;
+	background-color: #e5e5e5;
+	border-radius: 100%;
+	width: 7px;
+	height: 19px;
+	margin: 1px 5px;
+	color: #555;
+	box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
+}
+
+li .viadeo:hover,
+li .linkedin:hover,
+li .mail:hover,
+li .vcf:hover{
+	box-shadow: inset 0 3px 8px rgba(0,0,0,0);
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  background-color: #e5e5e5;
+}
+
+
+li .viadeo{
+	background-position: -13px -38px;
+}
+
+li .linkedin{
+	background-position: -155px -38px;
+}
+li .mail{
+	background-position: -13px -87px;
+}
+li .vcf{
+	background-position: -13px -135px;;
+}
+
 
 /* CONTACT FORM */
 section#contact {
@@ -103,7 +316,6 @@ section#contact {
 
 section#contact img {
 	width: 45px;
-	vertical-align: middle;
 	display: block;
     margin-left: auto;
     margin-right: auto;
@@ -114,7 +326,6 @@ section#contact a {
 	color: black;	
 	padding: 15px 0 15px 0;
 	border-bottom: 1px solid #6c6c6c;
-	-moz-box-sizing: border-box;
 	min-width: 200px;
 }
 
@@ -135,8 +346,15 @@ section#contact span {
 	margin-top: 15px;
 }
 
+.nav{
+	width: 100%;
+}
 .navbar {
 	margin-top: 50px;
+}
+
+.navbar .nav>li{
+	line-height: 30px;
 }
 
 div.navbar-inner {
@@ -153,8 +371,24 @@ div.navbar-inner {
 		width: 95%;
 	}
 
+	#mobileNavBar {
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.timeLine{
+		display: none;
+	}
+	.table_element:after, .table_element:before{
+		display: none;
+	}
 	.table_element {
-		display: block;
+		display: inline;
+	}
+	.contentArticle > ul:nth-child(even), .contentArticle > ul:nth-child(odd){
+		width: 90%;
+		margin: 10px auto;
 	}
 	.table_element span {
 		width: 99%;
@@ -222,7 +456,5 @@ div.navbar-inner {
 	.table_element span {
 		font-weight: bold;
 	}
-	.techno {
-		font-style: italic;
-	}
+	
 }
